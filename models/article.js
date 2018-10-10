@@ -24,12 +24,12 @@ var ArticleSchema = new Schema({
   },
   note: {
     type: Schema.Types.ObjectId,
-    ref: "Note"
+    ref: "note"
   }
 });
 
 // Create the article model with the ArticleSchema
-var Article = mongoose.model("Article", ArticleSchema);
+var Article = mongoose.model("article", ArticleSchema);
 
 // Export the module
 module.exports = Article;

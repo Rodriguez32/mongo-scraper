@@ -10,12 +10,12 @@ var NoteSchema = new Schema({
   },
   article: {
     type: Schema.Types.ObjectId,
-    ref: "Article"
+    ref: "article"
   }
 });
 
 // Create the Note model with the NoteSchema
-var Note = mongoose.model("Note", NoteSchema);
+var Note = mongoose.model("note", NoteSchema);
 
 // Export the Note model
 module.exports = Note;

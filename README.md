@@ -1,7 +1,7 @@
 # New York Times Article Scraper
 
 # Overview
-<p>An app that scrapes articles fromt the New York Times website. It also lets users save articles and comment on them.</p>
+<p>An app that scrapes articles from the New York Times website. It also lets users save articles and comment on them.</p>
 
 # How it Works
 <ul>

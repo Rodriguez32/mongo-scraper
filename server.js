@@ -10,9 +10,8 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 // Require all models
-var Note = require("./models/note");
-var Article = require("./models/article");
-// var db = require("./models");
+
+var db = require("./models");
 
 // Define Port
 var PORT = process.env.PORT || 3000;
@@ -31,31 +30,28 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Set Handlebars.
-var exphbs = require("express-handlebars");
+// var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({
-    defaultLayout: "main",
-   
-}));
-app.set("view engine", "handlebars");
+// app.engine("handlebars", exphbs({
+//     defaultLayout: "main"}));
+// app.set("view engine", "handlebars");
 
-// Connect to the Mongo DB
-// mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
+
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://");
+
 mongoose.connect("mongodb://localhost/mongoscraper", { useNewUrlParser: true });
-var db = mongoose.connection;
+
 
 // Show any mongoose errors
-db.on("error", function(error) {
-  console.log("Mongoose Error: ", error);
-});
+// db.on("error", function(error) {
+//   console.log("Mongoose Error: ", error);
+// });
 
 // Once logged in to the db through mongoose, log a success message
-db.once("open", function() {
-  console.log("Mongoose connection successful.");
-});
+// db.once("open", function() {
+//   console.log("Mongoose connection successful.");
+// });
 
 // Routes
 
